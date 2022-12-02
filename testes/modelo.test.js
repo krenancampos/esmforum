@@ -27,8 +27,8 @@ test('Testando cadastro de três perguntas', () => {
 test('Testando cadastro de resposta', () => {
   modelo.cadastrar_pergunta('1 + 1 = ?');
   const perguntas = modelo.listar_perguntas();
-  id = modelo.get_pergunta(perguntas[0].id_pergunta);
-  modelo.cadastrar_resposta(id.id_pergunta, "2");
+  pergunta = modelo.get_pergunta(perguntas[0].id_pergunta);
+  modelo.cadastrar_resposta(pergunta.id_pergunta, "2");
   
   const respostas = modelo.get_respostas(perguntas[0].id_pergunta)
 
